@@ -1,21 +1,11 @@
 name: dsi
-channels: !!python/object/new:ruamel_yaml.comments.CommentedSeq
-  listitems:
-  - spacy
-  - defaults
-  state:
-    _yaml_format: !!python/object:ruamel_yaml.comments.Format
-      _flow_style: false
-    _yaml_line_col: !!python/object:ruamel_yaml.comments.LineCol
-      col: 2
-      data:
-        0:
-        - 1
-        - 4
-        1:
-        - 2
-        - 4
-      line: 1
+channels:
+- ashore
+- condo-forge
+- haircloth-lab
+- jjhelmus
+- spacy
+- defaults
 dependencies:
 - _nb_ext_conf=0.2.0=py27_0
 - alabaster=0.7.8=py27_0
