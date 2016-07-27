@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>w1-lesson1.1-command-line slides</title>
+<title>w1-lesson-2.1-intro-to-python-3 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11831,20 +11831,17 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png" style="float: left; margin: 10px;"></p>
-<h1 id="Using-the-Command-Line">Using the Command Line<a class="anchor-link" href="#Using-the-Command-Line">&#182;</a></h1><hr>
-<p>Week 1 | Lesson 1.1</p>
+<h1 id="Intro-to-Python-3">Intro to Python 3<a class="anchor-link" href="#Intro-to-Python-3">&#182;</a></h1><hr>
+<p>Week 1 | Lesson 2.1</p>
 <h3 id="LEARNING-OBJECTIVES">LEARNING OBJECTIVES<a class="anchor-link" href="#LEARNING-OBJECTIVES">&#182;</a></h3><p><em>After this lesson, you will be able to:</em></p>
 <ul>
-<li>Create folders and files using the command line (mkdir, touch)</li>
-<li>Change directories and list directory contents (cd, ls)</li>
-<li>Check current working directly (pwd)</li>
+<li>Explain if/else and if/elif/else</li>
+<li>Explain for loop</li>
+<li>Demonstrate how to define functions</li>
 </ul>
 <h3 id="STUDENT-PRE-WORK">STUDENT PRE-WORK<a class="anchor-link" href="#STUDENT-PRE-WORK">&#182;</a></h3><p><em>Before this lesson, you should already be able to:</em></p>
 <ul>
-<li><a href="http://generalassembly.github.io/prework/cl/#/">GA pre-work</a></li>
-<li>Open the terminal</li>
-<li>Familiarize yourself with the <a href="http://mally.stanford.edu/~sr/computing/basic-unix.html" title="UNIX">UNIX</a> commands cd, pwd, mkdir, pwd, and touch (Don't worry,
-  we'll be going over them in class, just be able to give a description of what the commands mean.)</li>
+<li>Have a cursory explanation/idea of if/else, if/elif/else, loops, and functions.</li>
 </ul>
 
 </div>
@@ -11866,30 +11863,39 @@ a.anchor-link {
 <tr>
 <td style="text-align:center">10 min</td>
 <td><a href="#introduction">Introduction</a></td>
-<td>What is a GUI (pronounced gooey)?</td>
+<td>Control Flow</td>
 </tr>
 <tr>
-<td style="text-align:center">40 min</td>
-<td><a href="#demo">Codealong</a></td>
-<td>Forget Finder, get fast at using your laptop</td>
+<td style="text-align:center">15 min</td>
+<td><a href="#demo">Demo</a></td>
+<td>if, if/else</td>
 </tr>
 <tr>
-<td style="text-align:center">20 min</td>
-<td><a href="#demo">Codealong</a></td>
-<td>Paths</td>
+<td style="text-align:center">15 min</td>
+<td><a href="#demo">Demo</a></td>
+<td>if/elif/else</td>
 </tr>
 <tr>
-<td style="text-align:center">10 min</td>
-<td><a href="#ind-practice">Independent Practice</a></td>
-<td></td>
+<td style="text-align:center">15 min</td>
+<td><a href="#demo">Demo</a></td>
+<td>loops</td>
 </tr>
 <tr>
-<td style="text-align:center">10 min</td>
+<td style="text-align:center">15 min</td>
+<td><a href="#demo">Demo</a></td>
+<td>functions</td>
+</tr>
+<tr>
+<td style="text-align:center">15 min</td>
+<td><a href="#ind-practice">Independent Practice</a>  </td>
+</tr>
+<tr>
+<td style="text-align:center">5 min</td>
 <td><a href="#conclusion">Conclusion</a></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<hr>
 
 </div>
 </div>
@@ -11899,11 +11905,51 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a name="introduction"></a></p>
-<h2 id="What-is-a-GUI-(pronounced-gooey)?-(5-mins)">What is a GUI (pronounced gooey)? (5 mins)<a class="anchor-link" href="#What-is-a-GUI-(pronounced-gooey)?-(5-mins)">&#182;</a></h2><p>There was a point when computers didn't come with a Graphical User Interface (GUI). Instead, everyone interacted with the computer using text commands in what we call a Command Line Interface (CLI).</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/FreeDOS_Beta_9_pre-release5_%28command_line_interface%29_on_Bochs_sshot20040912.png" alt="Dos">
-<em>Image from Wikimedia</em></p>
-<p>Today, the command line still exists, even though you may have never seen it as a casual computer user. Knowing some basic CLI commands is useful.</p>
+<p><a name="Control Flow"></a></p>
+<h2 id="Introduction:-Topic-(10-mins)">Introduction: Topic (10 mins)<a class="anchor-link" href="#Introduction:-Topic-(10-mins)">&#182;</a></h2><p>It is very important to control program execution because in real situations are full of conditions and if you want your program to mimic the real world you need to transform those real world situations into your program. For this, you need to control the execution of your program statements. Controlling the program execution sequence is commonly known as control flow.</p>
+<p><a href="http://www.codeproject.com/Articles/663666/Python-Basics-Understanding-The-Flow-Control-State">control flow</a></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="http://snag.gy/s1jyw.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="if, if/else"></a></p>
+<h2 id="Demo-/-Codealong-/-Guided-Practice:-if,-if/else-(15-mins)">Demo / Codealong / Guided Practice: if, if/else (15 mins)<a class="anchor-link" href="#Demo-/-Codealong-/-Guided-Practice:-if,-if/else-(15-mins)">&#182;</a></h2><p>The general Python syntax for a simple if statement is:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> condition :
+            indentedStatementBlock
+</pre></div>
+<p>If the condition is true, then do the indented statements. If the condition
+is not true, then skip the indented statements.</p>
+<blockquote><p>Note: code also in <a href="https://github.com/generalassembly-studio/dsi-course-materials/blob/Week-1-Lesson-1.4/curriculum/04-lessons/week-01/1.4-lesson/code/Week%201%20Lesson%201.4%20%20demo%20code.ipynb">demo code folder</a></p>
+</blockquote>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We want to ask users to give us the weight of their luggage on a trip.  Generally, we will want to:</p>
+<ol>
+<li>Tell the user that there's a $25 surcharge for any luggage over 50 lbs.</li>
+<li>Tell the user "Thank you for your business" no matter what.</li>
+</ol>
 
 </div>
 </div>
@@ -11914,64 +11960,64 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This CLI is the gateway to your operating system and can do many of the same things you normally would do, without a graphical interface.  This is also facilitated by what we call a "shell".  What is a GUI? What is a CLI? What is a shell?</p>
+<p><em>note:  How would we represent this using a flowchart?</em></p>
 
 </div>
 </div>
 </div>
-</aside></section></section><section><section>
+</aside><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="What-is-a-shell?">What is a shell?<a class="anchor-link" href="#What-is-a-shell?">&#182;</a></h4><p>A shell is simply a type of command line program, which contains a very simple, text-based user interface enabling us to access all of an operating system's services. It is, very simply, a program that accepts text as input and translates that text into the appropriate functions that you want your computer to run.</p>
-<p><em>Taken from Just for fun: <a href="http://hackertyper.com/">Type like a hacker</a></em></p>
-<p>Here are a few Windows equivalents:
-<a href="https://www.cygwin.com/">Cygwin</a>
-<a href="https://msysgit.github.io/">msis git</a></p>
-<p><a href="http://stackoverflow.com/questions/28487128/what-program-in-windows-is-equivalent-to-oss-terminal">Windows shell equivalents</a></p>
+<p><img src="http://snag.gy/VtMt4.jpg" alt=""></p>
 
 </div>
 </div>
-</div><aside class="notes">
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">weight</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;How many pounds does your suitcase weigh? &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">weight</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;There is a $25 charge for luggage that heavy.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Thank you for your business.&quot;</span><span class="p">)</span>
+</pre></div>
 
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>How many pounds does your suitcase weigh? 23
+Thank you for your business.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Running applications, checking settings like free hard drive space, or even fun stuff like browsing the web can happen from the shell.  <strong>What is a GUI? What is a CLI? What is a shell?</strong></p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Forget-Finder,-get-fast-at-using-your-laptop---Codealong-(40-mins)">Forget Finder, get fast at using your laptop - Codealong (40 mins)<a class="anchor-link" href="#Forget-Finder,-get-fast-at-using-your-laptop---Codealong-(40-mins)">&#182;</a></h2><h4 id="Opening-&amp;-Closing-Terminal">Opening &amp; Closing Terminal<a class="anchor-link" href="#Opening-&amp;-Closing-Terminal">&#182;</a></h4><p>First, we need to launch the command prompt. We do this by using spotlight:</p>
+<p>Try with these numbers to test all of the cases:</p>
 <ul>
-<li>⌘ (Command) + Space</li>
-<li>"<em>Te</em>rminal"</li>
-<li>Enter</li>
+<li>43</li>
+<li>50</li>
+<li>51</li>
 </ul>
-<p>Notice that you can actually hit enter as soon as the field autocompletes. Get used to taking shortcuts – don't type the whole word out if you don't have to and avoid using your mouse if you can open or use an app with just keyboard shortcuts. It may seem harder now, but when you get used to it, it will save you literally hours of cumulative time.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Paths---Codealong-(20-mins)">Paths - Codealong (20 mins)<a class="anchor-link" href="#Paths---Codealong-(20-mins)">&#182;</a></h2><p>Every file or folder in a file system can be read, written, and deleted by referencing its position inside the filesystem. When we talk about the position of a file or a folder in a file system, we refer to its "path". There are a couple of different kinds of paths we can use to refer to a file – <strong>absolute paths</strong> and <strong>relative paths</strong>.</p>
-<p><strong>Directory</strong> is an important term that's used interchangeably with <em>folder</em>. Though they are not exactly the same thing, when we say "navigate to your project directory" think of this as "navigate to your project folder".  Here's a little more information:</p>
-<p><em>Strictly speaking, there is a difference between a directory which is a file system concept, and the graphical user interface metaphor that is used to represent it (a folder)...If one is referring to a container of documents, the term folder is more appropriate. The term directory refers to the way a structured list of document files and folders is stored on the computer. It is comparable to a telephone directory that contains lists of names, numbers and addresses and does not contain the actual documents themselves.</em></p>
-<p><em>Taken from <a href="http://www.citi.umich.edu/projects/nfs-perf/results/cel/dnlc.html">Close-To-Open Cache Consistency in the Linux NFS Client</a></em></p>
 
 </div>
 </div>
@@ -11982,7 +12028,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>All files can created, updated, or deleted using the command line interface.  We do this by referencing <strong>paths</strong>, relative or absolute.  I prefer the term directory when talking about the shell / term.</p>
+<p><em>note:  What is the general flow we notice about conditional flows?</em></p>
 
 </div>
 </div>
@@ -11993,24 +12039,53 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="What-is-an-absolute-path?">What is an absolute path?<a class="anchor-link" href="#What-is-an-absolute-path?">&#182;</a></h4><p>An absolute path is defined as the specific location of a file or folder from the root directory, typically shown as <code>/</code>. The root directory is the starting point from which all other folders are defined and is not normally the same as your <strong>Home</strong> directory, which is normally found at <code>/Users/[Your Username]</code>.</p>
+<p>The general Python if-else syntax is</p>
+
+<pre><code>    if condition :
+        indentedStatementBlockForTrueCondition
+    else:
+        indentedStatementBlockForFalseCondition
+
+</code></pre>
+<p>These statement blocks can have any number of statements, and can include
+about any kind of statement.</p>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">temperature</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is the temperature? &#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is the temperature? 23
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Working-with-unix-commands-and-file-paths">Working with unix commands and file paths<a class="anchor-link" href="#Working-with-unix-commands-and-file-paths">&#182;</a></h4><p>Typing <strong><code>cd</code></strong> - a command for "change directory" with no parameters takes us to our home directory.</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span>
-</pre></div>
-<p>If we type in <code>pwd</code> - a command for "print working directory" from that folder, we can see where we are in relation to the root directory. The <code>pwd</code> command will always give you the absolute path of your current location.</p>
-<p>An example of absolute path:</p>
-<div class="highlight"><pre><span></span>open /Users/Lucy/desktop/a/b/c/file.txt
-</pre></div>
-<p>Notice, this path starts from <code>/</code> directory which is a root directory for every Linux/Unix machines.</p>
+<p>Then let's stetup a way to react to this input using some conditional controls!</p>
 
 </div>
 </div>
@@ -12021,7 +12096,68 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Change directories.  pwd / show working directories.  Open a file using the open command.</p>
+<p><em>note: If we want to know what to wear (shorts or pants) if the temp is &gt; 70.</em></p>
+
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wear shorts.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wear long pants.&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Get some exercise outside.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Wear long pants.
+Get some exercise outside.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The middle four lines are an if-else statement. There are two indented
+blocks: One, like in the simple if statement, comes right after the
+if heading and is executed when the condition in the if heading is true.
+In the if-else form this is followed by an else: line, followed by
+another indented block that is only executed when the original condition is false.
+In an if-else statement exactly one of two possible indented blocks is executed.</p>
+<p>Play around inputting numbers that are &lt; 70 or &gt; 70.</p>
+<p><a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/ifstatements.html">control flow statements</a></p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em><strong>Check</strong>: What is the general syntax for an if statement? an if/else?</em></p>
 
 </div>
 </div>
@@ -12032,14 +12168,19 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="What-is-a-relative-path?">What is a relative path?<a class="anchor-link" href="#What-is-a-relative-path?">&#182;</a></h4><p>A relative path is a reference to a file or folder <strong>relative</strong> to the current position, or the present working directory(pwd). If we are in the folder <code>/a/b/</code> and we want to open the file that has the absolute path <code>/a/b/c/file.txt</code>, we can just type:</p>
-<div class="highlight"><pre><span></span>open c/file.txt
-</pre></div>
-<p>or</p>
-<div class="highlight"><pre><span></span>open ./c/file.txt
-</pre></div>
-<p>At any time, we can also use the absolute path, by adding a slash to the beginning of the path. The absolute path is the same for a file or a folder regardless of the current working directory, but relative paths are different, depending on what directory we are in.  Directory structures are laid out like <code>directory/subdirectory/subsubdirectory</code>.</p>
-<p><strong>Check:</strong>  What is the difference between an absolute path and a relative path?</p>
+<p><a name="if/elif/else"></a></p>
+<h2 id="Demo-/-Codealong-/-Guided-Practice:-if/elif/else-(15-mins)">Demo / Codealong / Guided Practice: if/elif/else (15 mins)<a class="anchor-link" href="#Demo-/-Codealong-/-Guided-Practice:-if/elif/else-(15-mins)">&#182;</a></h2><p>The syntax for an if-elif-else statement is indicated in general below:</p>
+
+<pre><code>    if condition1 :
+        indentedStatementBlockForTrueCondition1
+    elif condition2 :
+        indentedStatementBlockForFirstTrueCondition2
+    elif condition3 :
+        indentedStatementBlockForFirstTrueCondition3
+    elif condition4 :
+        indentedStatementBlockForFirstTrueCondition4
+    else:
+        indentedStatementBlockForEachConditionFalse</code></pre>
 
 </div>
 </div>
@@ -12049,25 +12190,100 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Navigating-using-the-command-prompt">Navigating using the command prompt<a class="anchor-link" href="#Navigating-using-the-command-prompt">&#182;</a></h4><ul>
-<li>Changing directories</li>
-<li>Listing files</li>
-<li>Creating directories and files</li>
-<li>removing files</li>
+<p><img src="http://snag.gy/s1jyw.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><em>note: Think, how might this look as flowchart?  Look familiar?</em></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Type in an integer.</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Please enter an integer: &quot;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Please enter an integer: 35
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now let's setup some business logic to describe some conditions:</p>
+<ul>
+<li>When x is less than 0</li>
+<li>When x is 0</li>
+<li>When x == 1</li>
+<li>When x is anything else other than the previous conditions</li>
 </ul>
-<p>The tilde <code>~</code> character is an alias to your home directory. Use it to quickly return home.</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ~<span class="se">\</span>
-</pre></div>
-<p>Or even more simply, you can just type:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span>
-</pre></div>
-<p>The tilde <code>~</code> character is useful to shorten paths that would otherwise be
-absolute paths. For example, to navigate to your Desktop you can type:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Desktop
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">print</span> <span class="s1">&#39;Negative changed to zero&#39;</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;Zero&#39;</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;Single&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s1">&#39;More&#39;</span>
 </pre></div>
 
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>More
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div><aside class="notes">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -12075,24 +12291,36 @@ absolute paths. For example, to navigate to your Desktop you can type:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>note: Also, pronounced "tild" but "tild-a" is good too.  cd by itself takes you to home directory much like the ~tilde char. Also touch can be used to update the timestamp of a file.</em></p>
+<p><em>note: Notice anything in particular about this example?  Aligment of indents?  How many blocks are there?  How many blocks are executed?</em></p>
 
 </div>
 </div>
 </div>
-</aside></section></section><section><section>
+</aside><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>ls</code> command lists files and directories in the current folder.</p>
-<div class="highlight"><pre><span></span>ls
-</pre></div>
-<p>It can also be used to list files located in any directory. For example to list
-your applications you can type:</p>
-<div class="highlight"><pre><span></span>ls /Applications
-</pre></div>
+<p>The <strong>if</strong>, each <strong>elif</strong>, and the final <strong>else</strong> line are all <em>aligned</em>. There can be any number
+of <strong>elif</strong> lines, each followed by an indented block. With this construction exactly
+one of the indented blocks is executed. It is the one corresponding to the first
+<em>True</em> condition.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="loops"></a></p>
+<h2 id="Demo-/-Codealong-/-Guided-Practice:-loops-(15-mins)">Demo / Codealong / Guided Practice: loops (15 mins)<a class="anchor-link" href="#Demo-/-Codealong-/-Guided-Practice:-loops-(15-mins)">&#182;</a></h2><p>Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence.</p>
+<p>The syntax for loop is indicated in general below:</p>
+
+<pre><code>for iterator_name in iterating_sequence:
+    …statements…</code></pre>
 
 </div>
 </div>
@@ -12102,15 +12330,82 @@ your applications you can type:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To make a new directory.</p>
-<div class="highlight"><pre><span></span>mkdir folder
+<p>Lets check this example out:</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;window&#39;</span><span class="p">,</span> <span class="s1">&#39;defenestrate&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">w</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
 </pre></div>
-<p>To create a new file.</p>
-<div class="highlight"><pre><span></span>touch file1
-</pre></div>
-<p>To remove a file.</p>
-<div class="highlight"><pre><span></span>rm file1
-</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>cat 3
+window 6
+defenestrate 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Knowledge check: what's happening here? Explain how the code returns what it does.</p>
+
+</div>
+</div>
+</div>
+</aside><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Read more:  <a href="https://docs.python.org/2/tutorial/controlflow.html#if-statements">for statements</a>,
+<a href="http://www.codeproject.com/Articles/663666/Python-Basics-Understanding-The-Flow-Control-State">for loop</a></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="functions"></a></p>
+<h2 id="Demo-/-Codealong-/-Guided-Practice:-functions-(15-mins)">Demo / Codealong / Guided Practice: functions (15 mins)<a class="anchor-link" href="#Demo-/-Codealong-/-Guided-Practice:-functions-(15-mins)">&#182;</a></h2><ul>
+<li>You can define functions to provide the required functionality. Here are simple rules to define a function in Python.<ul>
+<li>Function blocks <strong>begin with</strong> the keyword <strong>def</strong> followed by the function <strong>name</strong> and parentheses ( ( ) ).</li>
+<li><strong>Any</strong> input <strong>parameters</strong> or arguments should be placed <strong>within</strong> these <strong>parentheses</strong>. You can also define parameters inside            these parentheses.</li>
+<li>The first statement of a function can be an optional statement - the documentation string of the function or                  docstring.</li>
+<li>The code block within <strong>every</strong> function <strong>starts</strong> with a <strong>colon (:)</strong> and is <strong>indented</strong>.</li>
+<li>The statement <strong>return</strong> [expression] exits a function, optionally passing back an expression to the caller. A <strong>return</strong>             statement with no arguments is the same as return None.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.python.org/dev/peps/pep-0257/#what-is-a-docstring">Learn more about docstrings</a></p>
 
 </div>
 </div>
@@ -12120,67 +12415,12 @@ your applications you can type:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Whiteboard-Example!">Whiteboard Example!<a class="anchor-link" href="#Whiteboard-Example!">&#182;</a></h2>
-</div>
-</div>
-</div><aside class="notes">
+<h3 id="Here-is-the-anatomy-of-a-function:">Here is the anatomy of a function:<a class="anchor-link" href="#Here-is-the-anatomy-of-a-function:">&#182;</a></h3>
+<pre><code>def functionname( parameters ):
+   "function_docstring"
+   function_suite
+   return [expression]</code></pre>
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>note: how do we get from each directory, list files, create a new file</em></p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Using-wildcards-in-the-command-prompt">Using wildcards in the command prompt<a class="anchor-link" href="#Using-wildcards-in-the-command-prompt">&#182;</a></h4><p>The wildcard symbol <code>*</code> is useful for using commands to operate on multiple
-files. To give an example first create a folder on your Desktop and add some
-files.</p>
-<div class="highlight"><pre><span></span>mkdir ~/Desktop/example_folder
-<span class="nb">cd</span> ~/Desktop/example_folder
-touch cat.txt
-touch dog.txt
-touch bird.txt
-touch fish.txt
-</pre></div>
-<p>You can use the wildcard <code>*</code> to then operate on subsets of files. List any
-file with "i" in the filename, for example:</p>
-<div class="highlight"><pre><span></span>ls *i*
-</pre></div>
-<p>Or remove any file with "d":</p>
-<div class="highlight"><pre><span></span>rm *d*
-ls
-</pre></div>
-
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Maybe another whiteboard example.  Also check out tab.</p>
-
-</div>
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Quick:--How-do-we-get-back-to-my-homedirectory!?">Quick:  How do we get back to my homedirectory!?<a class="anchor-link" href="#Quick:--How-do-we-get-back-to-my-homedirectory!?">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
@@ -12189,8 +12429,92 @@ ls
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a name="independent practice"></a></p>
-<h2 id="Independent-Practice:-Topic-(10-minutes)">Independent Practice: Topic (10 minutes)<a class="anchor-link" href="#Independent-Practice:-Topic-(10-minutes)">&#182;</a></h2><p>Try out the mkdir, touch, cd, pwd, and ls commands on your own.</p>
+<p>How would we create a function that prints the first parameter?</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">printme</span><span class="p">(</span> <span class="nb">str</span> <span class="p">):</span>
+   <span class="s2">&quot;This prints a passed string into this function&quot;</span>
+   <span class="k">print</span> <span class="nb">str</span>
+   <span class="k">return</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How would we call this function passing a parameter?</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">printme</span><span class="p">(</span><span class="s2">&quot;Beltway traffic makes my head hurt.&quot;</span><span class="p">)</span>
+<span class="n">printme</span><span class="p">(</span><span class="s2">&quot;It looks like a parking lot out there!&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Beltway traffic makes my head hurt.
+It looks like a parking lot out there!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="http://www.tutorialspoint.com/python/python_functions.htm">defining a function</a></p>
+<p><em><strong>Check</strong> What’s the general syntax for a function? Why do you think functions might be useful?</em></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a name="ind-practice"></a></p>
+<h2 id="Independent-Practice:-Topic-(10-minutes)">Independent Practice: Topic (10 minutes)<a class="anchor-link" href="#Independent-Practice:-Topic-(10-minutes)">&#182;</a></h2><ul>
+<li>What is the general syntax/format of:  
+<pre><code>  -  if/else?
+  -  if/elif/else?
+  -  loop?
+  - function?</code></pre>
+</li>
+<li>Define and explain each to a partner</li>
+</ul>
 
 </div>
 </div>
@@ -12201,9 +12525,19 @@ ls
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a name="conclusion"></a></p>
-<h2 id="Conclusion-(5-mins)">Conclusion (5 mins)<a class="anchor-link" href="#Conclusion-(5-mins)">&#182;</a></h2><p>Today we learned about the CLI commands mkdir, touch, cd, pwd, and ls. We also about absolute and relative paths.
-Take a breather and then keep practicing. The more you practice the more comfortable you'll get!</p>
-<p>In time, you might find that simple operations are actually faster to perform from command line.</p>
+<h2 id="Conclusion-(5-mins)">Conclusion (5 mins)<a class="anchor-link" href="#Conclusion-(5-mins)">&#182;</a></h2><p>Today we learned about if/else, if/elif/else, loops, and functions. Practice coding each until you
+feel comfortable. If you understand basic control flow concepts, you're on your way to writing
+fantastic executable programs!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bonus-Challenges">Bonus Challenges<a class="anchor-link" href="#Bonus-Challenges">&#182;</a></h2><p>Once you've mastered the basics, further your understanding of Python by attempting "<a href="code/starter-code/Bonus%20Code%20Challenges%203%20Starter%20Code%20-%20Week%201%20Lesson%202.2.ipynb#">Alternate Code Challenges 3</a>", involving recursive functions.</p>
 
 </div>
 </div>
