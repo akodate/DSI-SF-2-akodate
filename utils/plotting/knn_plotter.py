@@ -55,10 +55,11 @@ class KNNBoundaryPlotter(object):
 
         # use the numpy meshgrid function to make a bunch of points across the range
         # of values.
-        self.xx, self.yy = np.meshgrid(np.arange(self.x_min, self.x_max,
-                                                 (v1_range/self.granularity)),
-                                       np.arange(self.y_min, self.y_max,
-                                                 (v2_range/self.granularity)))
+
+        self.xx, self.yy = np.meshgrid(np.linspace(self.x_min, self.x_max,
+                                                   self.granularity),
+                                       np.linspace(self.y_min, self.y_max,
+                                                   self.granularity))
 
         # meshgrids:
         self.Zs = {'uniform':{},
