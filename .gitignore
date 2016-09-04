@@ -35,7 +35,8 @@ datasets/san_francisco
 datasets/yelp_arizona_data
 datasets/sf_assessor_value
 curriculum/week-05/3.1-sql_together/assets
-datasets/data_for_diplomas/
+datasets/data_for_diplomas
 reference
 projects/modelagency
 projects/.ipynb_checkpoints
+datasets/stack_exchange_travel
