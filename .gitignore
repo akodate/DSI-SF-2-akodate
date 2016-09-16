@@ -40,3 +40,4 @@ reference
 projects/modelagency
 projects/.ipynb_checkpoints
 datasets/stack_exchange_travel
+datasets/bay_area_bike_share/
