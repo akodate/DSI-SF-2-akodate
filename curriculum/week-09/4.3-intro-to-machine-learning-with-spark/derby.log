@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Sep 22 09:38:40 PDT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0157-52c3-68a5-00000c321960 
+on database directory /Users/davidyerrington/anaconda/envs/dsi/DSI-SF-2/curriculum/week-09/4.3-machine-learning-with-spark/metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@686bb011 
+Loaded from file:/usr/local/Cellar/apache-spark/2.0.0/libexec/jars/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_102-b14
+user.dir=/Users/davidyerrington/anaconda/envs/dsi/DSI-SF-2/curriculum/week-09/4.3-machine-learning-with-spark
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
